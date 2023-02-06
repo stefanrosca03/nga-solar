@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="portofolio-eng.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"> 
+    
+</head>
+<body>
+    <div class="sun">
+        <div class="ray_box">
+            <div class="ray ray1"></div>
+            <div class="ray ray2"></div>
+            <div class="ray ray3"></div>
+            <div class="ray ray4"></div>
+            <div class="ray ray5"></div>
+            <div class="ray ray6"></div>
+            <div class="ray ray7"></div>
+            <div class="ray ray8"></div>
+            <div class="ray ray9"></div>
+            <div class="ray ray10"></div>
+        </div>
+    </div>
+    <div class="center">
+        <div id = "cloud"></div>
+    </div>
+    <!-- ---------------------------background------------------------------------- -->
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="index-eng.html">NGA Solar</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index-eng.html">Home</a></li>
+            <li><a href="about-eng.html">About Us</a></li>
+            <li><a href="services-eng.html">Services</a></li>
+            <li><a href="offers-eng.html">Our Offers</a></li>
+            <li><a href="portofolio-eng.html">Our Diligence</a></li>
+            <li><a href="contact-eng.html">Contact</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="banner"></div>
+      <p class="vrajeala" style="color: white;">Here we are presenting some of our work, we appreciate every minute of it.</p>
+      <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+          navbar.classList.add("show");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabled");
+        }
+        cancelBtn.onclick = ()=>{
+          body.classList.remove("disabled");
+          navbar.classList.remove("show");
+          menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+          this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+      </script>
+      <!----------------------------menu--------------------------------------->
+      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+        <img class="image" src="img/first.jpg" draggable="false" />
+        <img class="image" src="img/second.jpg" draggable="false" />
+        <img class="image" src="img/third.jpg" draggable="false" />
+        <img class="image" src="img/fourth.jfif" draggable="false" />
+        <img class="image" src="img/fifth.jpg" draggable="false" />
+        <img class="image" src="img/sixth.jfif" draggable="false" />
+        <img class="image" src="img/seventh.jfif" draggable="false" />
+        <img class="image" src="img/eight.jfif" draggable="false" />
+      </div>
+      
+      <script>
+        const track = document.getElementById("image-track");
+      
+      const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+      
+      const handleOnUp = () => {
+      track.dataset.mouseDownAt = "0";  
+      track.dataset.prevPercentage = track.dataset.percentage;
+      }
+      
+      const handleOnMove = e => {
+      if(track.dataset.mouseDownAt === "0") return;
+      
+      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+        maxDelta = window.innerWidth / 2;
+      
+      const percentage = (mouseDelta / maxDelta) * -100,
+        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+      
+      track.dataset.percentage = nextPercentage;
+      
+      track.animate({
+      transform: `translate(${nextPercentage}%, -50%)`
+      }, { duration: 1200, fill: "forwards" });
+      
+      for(const image of track.getElementsByClassName("image")) {
+      image.animate({
+      objectPosition: `${100 + nextPercentage}% center`
+      }, { duration: 1200, fill: "forwards" });
+      }
+      }
+      
+      /* -- Had to add extra lines for touch events -- */
+      
+      window.onmousedown = e => handleOnDown(e);
+      
+      window.ontouchstart = e => handleOnDown(e.touches[0]);
+      
+      window.onmouseup = e => handleOnUp(e);
+      
+      window.ontouchend = e => handleOnUp(e.touches[0]);
+      
+      window.onmousemove = e => handleOnMove(e);
+      
+      window.ontouchmove = e => handleOnMove(e.touches[0]);
+      </script>
+      <!-- ---------------------------------------------------------------------------------- -->
+      <footer>
+        <div class="footer">
+        <div class="row">
+        <a href="https://www.facebook.com/nga.solar"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/solarnga/"><i class="fab fa-instagram"></i></a>
+        
+        </div>
+        
+        <div class="row">
+        <ul>
+          <li><a href="contact-eng.html">Contact Us</a></li>
+          <li><a href="services-eng.html">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        
+        </ul>
+        </div>
+        
+        <div class="row">
+        NGA Solar Copyright © 2023 Rosca Stefan - All rights reserved || Designed By: Stefan Rosca
+        </div>
+        </div>
+        </footer>
+        <!-- ---------------------------------footer------------------------------ -->
+        <script></script>
+</body>
+</html>

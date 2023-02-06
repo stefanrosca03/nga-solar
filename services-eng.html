@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="services-eng.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"> 
+</head>
+<body>
+    <div class="sun">
+        <div class="ray_box">
+            <div class="ray ray1"></div>
+            <div class="ray ray2"></div>
+            <div class="ray ray3"></div>
+            <div class="ray ray4"></div>
+            <div class="ray ray5"></div>
+            <div class="ray ray6"></div>
+            <div class="ray ray7"></div>
+            <div class="ray ray8"></div>
+            <div class="ray ray9"></div>
+            <div class="ray ray10"></div>
+        </div>
+    </div>
+    
+    <!-- ---------------------------background------------------------------------- -->
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="#">NGA Solar</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index-eng.html">Home</a></li>
+            <li><a href="about-eng.html">About Us</a></li>
+            <li><a href="services-eng.html">Services</a></li>
+            <li><a href="offers-eng.html">Our Offers</a></li>
+            <li><a href="portofolio-eng.html">Our Diligence</a></li>
+            <li><a href="contact-eng.html">Contact</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="banner"></div>
+      
+      </div>
+      <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+          navbar.classList.add("show");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabled");
+        }
+        cancelBtn.onclick = ()=>{
+          body.classList.remove("disabled");
+          navbar.classList.remove("show");
+          menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+          this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+      </script>
+      <!----------------------------menu--------------------------------------->
+      <div class="container">
+        <h1>Our Services</h1>
+        <div class="row-service">
+          <div class="service">
+            <i class="fas fa-building"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+              quae?
+            </p>
+          </div>
+          <div class="service">
+            <i class="fas fa-envelope"></i>
+            <h2>Fast Email responses</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+              quae?
+            </p>
+          </div>
+          <div class="service">
+            <i class="fab fa-sketch"></i>
+            <h2>Clean Work</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+              quae?
+            </p>
+          </div>
+          <div class="service">
+            <i class="fas fa-database"></i>
+            <h2>Data Analysis</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+              quae?
+            </p>
+          </div>
+          <div class="service">
+            <i class="fas fa-solar-panel"></i>
+            <h2>Quality Solar Panels</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+              quae?
+            </p>
+          </div>
+          <div class="service">
+            <i class="fas fa-file-invoice"></i>
+            <h2>Affordable Offers</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+              quae?
+            </p>
+          </div>
+          <div class="service">
+            <i class="fas fa-money-check-alt"></i>
+            <h2>On-a-Budget</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+              quae?
+            </p>
+          </div>
+          <div class="service">
+            <i class="fas fa-network-wired"></i>
+            <h2>Good Communication with Customers </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+              quae?
+            </p>
+          </div>
+        </div>
+      </div>
+       <!-- ---------------------------------------------------------------------------------- -->
+   
+       <footer>
+        <div class="footer">
+        <div class="row">
+        <a href="https://www.facebook.com/nga.solar"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/solarnga/"><i class="fab fa-instagram"></i></a>
+        
+        </div>
+        
+        <div class="row">
+        <ul>
+          <li><a href="contact-eng.html">Contact Us</a></li>
+          <li><a href="services-eng.html">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        
+        </ul>
+        </div>
+        
+        <div class="row">
+        NGA Solar Copyright © 2023 Rosca Stefan - All rights reserved || Designed By: Stefan Rosca
+        </div>
+        </div>
+        </footer>
+        <!-- ---------------------------------footer------------------------------ -->
+</body>
+</html>

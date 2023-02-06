@@ -1,0 +1,391 @@
+    /* ------------------------------------background-------------------------------------- */
+
+    body {
+      background:#2EB5E5 ;
+    }
+    
+    .sun { 
+      position: absolute;
+      top:0;
+      left: 0px;
+      right: 600px;
+      bottom: 700px;
+      margin: auto;  
+      width:100px;
+      height:100px;
+      border-radius:50%;  
+      background:rgb(247, 238, 159);
+      opacity:0.9;      
+      box-shadow: 0px 0px 40px 15px rgb(241, 224, 168);  
+    }
+    
+    .ray_box {
+      position: absolute;
+      margin: auto;
+      top:0px;
+      left:0;
+      right:0;
+      bottom:0; 
+      width:70px;  
+      -webkit-animation: ray_anim 120s linear infinite;
+      animation: ray_anim 120s linear infinite;
+    }
+    .ray {  
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
+        margin-left:10px;
+        border-radius:80% 80% 0 0;
+        position:absolute;
+        opacity:0.1;
+    }
+    
+    .ray1 {    
+        height:170px;
+        width:30px;
+       -webkit-transform: rotate(180deg);
+        top:-175px;
+        left: 15px;
+    }
+    .ray2 {
+        height:100px;
+        width:8px;
+       -webkit-transform: rotate(220deg);
+        top:-90px;
+        left: 75px;
+    }
+    .ray3 {
+        height:170px;
+        width:50px;
+       -webkit-transform: rotate(250deg);
+        top:-80px;
+        left: 100px;
+    }
+    .ray4 {
+        height:120px;
+        width:14px;
+       -webkit-transform: rotate(305deg);
+        top:30px;
+        left: 100px;
+    }
+    .ray5 {
+        height:140px;
+        width:30px;
+       -webkit-transform: rotate(-15deg);
+        top:60px;
+        left: 40px;
+    }
+    .ray6 {
+        height:90px;
+        width:50px;
+       -webkit-transform: rotate(30deg);
+        top:60px;
+        left: -40px;
+    }
+    .ray7 {
+        height:180px;
+        width:10px;
+       -webkit-transform: rotate(70deg);
+        top:-35px;
+        left: -40px;
+    }
+    .ray8 {
+        height:120px;
+        width:30px;
+       -webkit-transform: rotate(100deg);
+        top:-45px;
+        left:-90px;
+    }
+    .ray9 {
+        height:80px;
+        width:10px;
+       -webkit-transform: rotate(120deg);
+        top:-65px;
+        left:-60px;
+    }
+    .ray10 {
+        height:190px;
+        width:23px;
+       -webkit-transform: rotate(150deg);
+        top:-185px;
+        left: -60px;
+    }
+    
+    
+    @-webkit-keyframes ray_anim { 
+        0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}    
+        100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+    }
+     
+    
+    /* ------------------------------------menu-------------------------------------- */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+      width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+      background: #888;
+  }
+  ::selection{
+    background: rgb(0,123,255,0.3);
+  }
+  .content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 30px;
+  }
+  .navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding: 25px 0;
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky{
+    background: #1b1b1b;
+    padding: 10px 0;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+  }
+  .navbar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .logo a{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    position: absolute;
+    right: 2000px;
+    bottom: 10px;
+  }
+  .navbar .menu-list{
+    display: inline-flex;
+  }
+  .menu-list li{
+    list-style: none;
+  }
+  .menu-list li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .menu-list li a:hover{
+    color: #007bff;
+  }
+  .banner{
+    background: url("banner.jpg") no-repeat;
+    height: 5vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .about{
+    padding: 30px 0;
+  }
+  .about .title{
+    font-size: 38px;
+    font-weight: 700;
+  }
+  .about p{
+    padding-top: 20px;
+    text-align: justify;
+  }
+  .icon{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  .menu-list .cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
+  @media (max-width: 1230px) {
+    .content{
+      padding: 0 60px;
+    }
+  }
+  @media (max-width: 1100px) {
+    .content{
+      padding: 0 40px;
+    }
+  }
+  @media (max-width: 900px) {
+    .content{
+      padding: 0 30px;
+    }
+  }
+  @media (max-width: 868px) {
+    body.disabled{
+      overflow: hidden;
+    }
+    .icon{
+      display: block;
+    }
+    .icon.hide{
+      display: none;
+    }
+    .navbar .menu-list{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 400px;
+      left: -100%;
+      top: 0px;
+      display: block;
+      padding: 40px 0;
+      text-align: center;
+      background: #222;
+      transition: all 0.3s ease;
+    }
+    .navbar.show .menu-list{
+      left: 0%;
+    }
+    .navbar .menu-list li{
+      margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+      font-size: 23px;
+      margin-left: -100%;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a{
+      margin-left: 0px;
+    }
+  }
+  @media (max-width: 380px) {
+    .navbar .logo a{
+      font-size: 27px;
+    }
+  }
+  /* ------------------------------------------------------------------------------ */
+  .container {
+    width: 100%;
+    height: 100%;
+    padding: 0px 8%;
+  }
+  
+  .container h1 {
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .container h1::after {
+    content: '';
+    background: #303ef7;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .row-service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .service {
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+  }
+  
+  .service i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #303ef7;
+  }
+  
+  .service h2 {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .service:hover {
+    background: #303ef7;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  .service:hover i {
+    color: #fff;
+  }
+  /* ------------------------ social media icons styling ----------------------------*/
+  .footer{
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
