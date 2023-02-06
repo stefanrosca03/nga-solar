@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about-eng.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/6a3cbf519d.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="sun">
+        <div class="ray_box">
+            <div class="ray ray1"></div>
+            <div class="ray ray2"></div>
+            <div class="ray ray3"></div>
+            <div class="ray ray4"></div>
+            <div class="ray ray5"></div>
+            <div class="ray ray6"></div>
+            <div class="ray ray7"></div>
+            <div class="ray ray8"></div>
+            <div class="ray ray9"></div>
+            <div class="ray ray10"></div>
+        </div>
+    </div>
+    
+    <!-- ---------------------------background------------------------------------- -->
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="index-eng.html">NGA Solar</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index-eng.html">Home</a></li>
+            <li><a href="about-eng.html">About Us</a></li>
+            <li><a href="services-eng.html">Services</a></li>
+            <li><a href="offers-eng.html">Our Offers</a></li>
+            <li><a href="portofolio-eng.html">Our Diligence</a></li>
+            <li><a href="contact-eng.html">Contact</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="banner"></div>
+      <div class="about"></div>
+      <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+          navbar.classList.add("show");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabled");
+        }
+        cancelBtn.onclick = ()=>{
+          body.classList.remove("disabled");
+          navbar.classList.remove("show");
+          menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+          this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+      </script>
+      <!----------------------------menu--------------------------------------->
+      <div class="about-us">
+      <div class="about-section">
+        <h1>About Us </h1>
+        <p style="font-size: 30px;"> Groupline NGA is happy to announce the start of a new era.</p>
+        <p>NGA Solar provides a new and inovative alternative to energy solutions. Solar and energy storage solutions for residential & commercial applications.</p>
+      </div>
+      
+      <h2 style="text-align:center; color: white; font-size: 30px;">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="img/maleProfile.jpg" alt="George Nistor" style="width:100%">
+            <div class="container">
+              <h2>George Nistor</h2>
+              <p class="title">CEO & Co-Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>jane@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="img/paul.jpg" alt="Paul Stoinea" style="width:100%">
+            <div class="container">
+              <h2>Paul Stoinea</h2>
+              <p class="title">CEO & Co-Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>stoinea7@gmail.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="img/maleProfile.jpg" alt="someone" style="width:100%">
+            <div class="container">
+              <h2>=========</h2>
+              <p class="title">======</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>asdasdasdasdasdasd/p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <!-- -----------------------------about us---------------------------------------- -->
+      <!-- ---------------------------------------------------------------------------------- -->
+      <footer>
+        <div class="footer">
+        <div class="row">
+        <a href="https://www.facebook.com/nga.solar"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/solarnga/"><i class="fab fa-instagram"></i></a>
+        
+        </div>
+        
+        <div class="row">
+        <ul>
+          <li><a href="contact-eng.html">Contact Us</a></li>
+          <li><a href="services-eng.html">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        
+        </ul>
+        </div>
+        
+        <div class="row">
+        NGA Solar Copyright © 2023 Rosca Stefan - All rights reserved || Designed By: Stefan Rosca
+        </div>
+        </div>
+        </footer>
+        <!-- ---------------------------------footer------------------------------ -->  
+      
+</body>
+</html>

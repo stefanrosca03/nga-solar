@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/6a3cbf519d.css" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"> 
+</head>
+<body>
+    <!-- ---------------------------background------------------------------------- -->
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="index-eng.html" class="logo-writing">NGA Solar</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fa-thin fa-list"></i>
+            </div>
+            <li><a href="index-eng.html">Home</a></li>
+            <li><a href="about-eng.html">About Us</a></li>
+            <li><a href="services-eng.html">Services</a></li>
+            <li><a href="offers-eng.html">Our Offers</a></li>
+            <li><a href="portofolio-eng.html">Our Diligence</a></li>
+            <li><a href="contact-eng.html">Contact</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fa-solid fa-list"></i>
+          </div>
+        </div>
+      </nav>
+    
+      </div>
+      <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+          navbar.classList.add("show");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabled");
+        }
+        cancelBtn.onclick = ()=>{
+          body.classList.remove("disabled");
+          navbar.classList.remove("show");
+          menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+          this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+      </script>
+      <!----------------------------menu--------------------------------------->
+      <div class="hero">   
+        <div class="hero-text">
+        <h1>NGA Solar Presents</h1>
+        <p>The most affordable variant to clean energy.</p>
+        <a href="offers-eng.html" title="call to action button">Explore Offers</a>
+        </div>
+      </div>
+<!-- ---------------------------things----------------------------------------- -->
+
+      <!-- ---------------------------------------------------------------------------------- -->
+      <footer>
+        <div class="footer">
+        <div class="row">
+        <a href="https://www.facebook.com/nga.solar"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/solarnga/"><i class="fab fa-instagram"></i></a>
+        
+        </div>
+        
+        <div class="row">
+        <ul>
+          <li><a href="contact-eng.html">Contact Us</a></li>
+          <li><a href="services-eng.html">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        
+        </ul>
+        </div>
+        
+        <div class="row">
+        NGA Solar Copyright © 2023 Rosca Stefan - All rights reserved || Designed By: Stefan Rosca
+        </div>
+        </div>
+        </footer>
+        <!-- ---------------------------------footer------------------------------ -->
+    </body>
+    </html>
+</body>
+</html>
